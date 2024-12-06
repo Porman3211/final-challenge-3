@@ -1,0 +1,30 @@
+//Mocnangan Grant
+//CITCS 1N-A
+//Final Challenge No. 3
+public class CourseEnrollmentAndGradesTracker {
+    public static void main(String[] args) {
+        //1D Array for the student names
+        String[] studentNames = {"Jake", "Mike", "P.Diddy", "Beyonce", "Inday"};
+
+        //2D array to store grades for 3 subjects
+        double[][] grades = {
+            {85.0, 90.0, 88.0}, // Grades for Jake
+            {78.0, 82.0, 80.0}, // Grades for Mike
+            {92.0, 94.0, 96.0}, // Grades for P.Diddy
+            {88.0, 85.0, 87.0}, // Grades for Beyonce
+            {75.0, 70.0, 72.0}  // Grades for Inday
+        };
+
+        //To calculate the average grades
+        System.out.println("Student Name\tAverage Grade");
+        System.out.println("-----------------------------");
+        for (int i = 0; i < studentNames.length; i++) {
+            double total = 0.0;
+            for (int j = 0; j < grades[i].length; j++) {
+                total += grades[i][j];
+            }
+            double average = total / grades[i].length;
+            System.out.println(studentNames[i] + "\t\t" + average);
+        }
+    }
+}
